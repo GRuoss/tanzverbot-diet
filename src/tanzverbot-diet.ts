@@ -1,7 +1,7 @@
 export enum Sex {
   Male = "m",
   Female = "f",
-}
+} // TODO
 
 const foodNames: string[] = [
   "Kellogg's Tresor",
@@ -15,7 +15,7 @@ const foodNames: string[] = [
   "Schweppes Ginger Ale",
   "Mini Babybel",
 ];
-const foodCalories: number[] = [137, 64, 271, 40, 297, 125, 482, 835, 37, 59];
+const foodCalories: number[] = [137, 64, 271, 40, 297, 125, 482, 835, 37, 59]; //TODO
 const foodServings: number[] = [4, 8, 4, 12, 1, 6, 2, 2, 25, 20];
 
 export function calcDateOnDiet(
@@ -28,10 +28,10 @@ export function calcDateOnDiet(
   const weightGainKg = targetWeightKg - currentWeightKg;
   if (weightGainKg < 0) {
     throw new Error(`This diet is for gaining weight, not loosing it!`);
-  }
+  } //todo
   if (ageY < 16 || heightM < 1.5) {
     throw new Error(`You do not qualify for this kind of diet.`);
-  }
+  } // TODO
   let dailyCaloriesOnDiet = 0;
   for (const index in foodNames) {
     const calories = foodCalories[index] || 0;
